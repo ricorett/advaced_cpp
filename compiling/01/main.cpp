@@ -1,5 +1,5 @@
 #include <iostream>
-// using namespace std; 
+
 
 struct point {
 	double m_x;
@@ -11,10 +11,6 @@ struct point {
 };
 
 void print_point(const point& point_object); 
-// {
-// 	std::cout << "x:" << point_object.m_x << ", y: "
-// 		<< point_object.m_y << std::endl;
-// }
 
 int main()
 {
