@@ -33,4 +33,3 @@ private:
     int r, c;
     std::vector<T> data;
 };
-
