@@ -1,32 +1,36 @@
 #pragma once
 #include <iostream>
+#include <utility>
+#include <vector>
 
 template<class T>
 class Table {
 public:
-
-
-    Table(int rows, int cols) : r(rows), c(cols), data(r * c){};
+    Table(int rows, int cols) : r(rows), c(cols), data(rows * cols) {}
     ~Table() = default;
 
-    std::pair<int, int> Size() const {
+    [[nodiscard]] std::pair<int, int> Size() const {
         return std::make_pair(r, c);
     }
-    T getElement() const
-    {
-        return data[r][c];
+
+    T getElement(int row, int col) const {
+        return data[row * c + col];
     }
-    T operator[](int index) const {
-        return data[r][c];
+
+    T& getElement(int row, int col) {
+        return data[row * c + col];
     }
-    T& operator[](int index) {
-        return data[r][c];
+
+    T* operator[](int row) {
+        return &data[row * c];
     }
+
+    const T* operator[](int row) const {
+        return &data[row * c];
+    }
+
 private:
     int r, c;
     std::vector<T> data;
-
 };
-
-
 
