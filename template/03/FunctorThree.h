@@ -5,16 +5,16 @@ class FunctorThree {
 public:
     FunctorThree() : sum(0), count(0){}
     ~FunctorThree() = default;
-    int operator()(int x) {
+    void operator()(int x) {
         if ((x % 3) == 0){
             sum += x;
             count++;
         }
     }
-    int get_sum(){
+    int get_sum() const{
         return sum;
     }
-    int get_count(){
+    int get_count() const{
         return count;
     }
 private:
