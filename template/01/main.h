@@ -10,7 +10,7 @@ Type t_pow(Type i){
 }
 
 template<>
-std::vector<int> t_pow<std::vector<int> >(std::vector<int> arr_vector) {
+std::vector<int> t_pow(std::vector<int> arr_vector) {
     for (int& i : arr_vector) {
         i = pow(i, 2);
     }

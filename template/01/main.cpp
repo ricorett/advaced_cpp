@@ -13,7 +13,7 @@ int main(){
         }
     std::cout << std::endl;
     std::cout << "[OUT]: ";
-    arr_vector =  t_pow((std::vector<int>)arr_vector);
+    arr_vector =  t_pow(arr_vector);
     for (int i : arr_vector){
         std::cout << i << " ";
     }
