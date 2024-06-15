@@ -1,4 +1,4 @@
-#include "header.h"
+#include "tridiagonal_matrix.h"
 int main()
 {
     auto down = std::vector<double>{ -4.0, 5.0 };
