@@ -8,7 +8,7 @@ class BigInt {
 public:
     BigInt() = default;
     BigInt(const std::string& num) : number(num) {
-        std::reverse(number.begin(), number.end()); // Сохраняем цифры в обратном порядке для удобства
+        std::reverse(number.begin(), number.end()); // Сохраняем цифры в обратном порядке
     }
     BigInt(std::string&& num) : number(std::move(num)) {
         std::reverse(number.begin(), number.end());

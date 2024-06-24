@@ -4,7 +4,6 @@ int main() {
     BigInt number2("78524");
     BigInt result = number1 + number2;
 
-    std::cout << result << std::endl; // 193099
-
+    std::cout << result << std::endl;
     return 0;
 }
